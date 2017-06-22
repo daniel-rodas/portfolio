@@ -1,0 +1,55 @@
+footer {
+    width: 100%;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    overflow: hidden;
+}
+
+footer,
+footer a,
+footer aside,
+footer section,
+footer li,
+footer p {
+    color: rgb(249, 252, 231) !important;
+}
+
+footer h1,
+footer h2,
+footer h3,
+footer h4,
+footer h5,
+footer h6 {
+    /*text-align: center;*/
+}
+
+footer section,
+footer aside {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 2em;
+
+}
+
+
+footer section ul li {
+    list-style: none;
+}
+
+footer aside.tableOfContents {
+
+}
+
+
+@media (min-width: 768px ) {
+
+    footer section,
+    footer aside {
+        /*display: inline-block;*/
+        float: left;
+        vert-align: top;
+        width: 49%;
+        margin: 0;
+    }
+}

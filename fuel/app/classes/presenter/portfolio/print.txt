@@ -1,0 +1,27 @@
+<?php
+
+/**
+ * The Print Exhibit presenter.
+ *
+ * @package  app
+ * @extends  Presenter
+ */
+class Presenter_Portfolio_Exhibit_Print extends Presenter_Portfolio_Exhibit
+{
+
+    public function set_view()
+    {
+        $this->_view = View::forge('portfolio/category/print');
+    }
+
+    /**
+     * Prepare the view data, keeping this in here helps clean up
+     * the controller.
+     *
+     * @return void
+     */
+    public function view()
+    {
+        parent::view();
+     }
+}

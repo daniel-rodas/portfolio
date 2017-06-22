@@ -1,0 +1,1 @@
+<iframe class="hidden-xs" style="display:block; width: 972px; height:720px; margin: 0 auto;" src="<?= $url; ?>" frameborder="0" allowfullscreen></iframe>

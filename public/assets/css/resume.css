@@ -1,0 +1,138 @@
+@charset "utf-8";
+#wrapper-resume * {
+    padding: 0;
+    margin: 0;
+}
+#wrapper-resume body {
+    line-height: 1.4;
+    font-size: 100%;
+    font-family: "Adelle Sans",sans-serif;
+    background-color: #42413C;
+    color: #000;
+    background-image: url(/assets/img/resume/desk_bg.png);
+}
+#wrapper-resume li {
+    list-style: none;
+}
+
+#wrapper-resume a img {
+    border: none;
+}
+#wrapper-resume a:link {
+    color: #42413C;
+}
+#wrapper-resume a:visited {
+    color: #6E6C64;
+}
+#wrapper-resume a:hover, a:active, a:focus {
+    text-decoration: none;
+}
+
+#wrapper-resume {
+    /*width: 960px;*/
+    background-color: #EDEDED;
+    background-image: url(/assets/img/resume/paper_bg.png);
+    margin: 2em auto;
+    padding-top: 4em;
+    box-shadow: 2px 2px 2px 2px #777;
+}
+
+#wrapper-resume article section {
+    padding: 0.2em 0.4em 0.8em 0.4em;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+#wrapper-resume article section ul li {
+    font-size: 14px;
+    line-height: 1.2;
+}
+#wrapper-resume article hr {
+    visibility:hidden;
+    clear:both;
+    display:block;
+}
+#wrapper-resume section em {
+    font-size: 1.32500em;
+    line-height: 1.1em;
+}
+
+#wrapper-resume header img {
+    width: 1em;
+    margin-right: 1em;
+    cursor: pointer;
+}
+
+
+#wrapper-resume footer {
+    padding: 10px 0;
+    background-color: #CCC49F;
+    position: relative;
+    clear: both;
+}
+
+#wrapper-resume header, section, footer, aside, article, figure, address {
+    display: block;
+}
+
+@media (min-width: 768px ) {
+    #wrapper-resume article h2 {
+        font-size: 1.62500em;
+        line-height: 1.84615em;
+        margin-top: 0.9231em;
+        margin-bottom: 0em;
+        width: 38%;
+        float: left;
+        text-align: right;
+        padding: 0.85em 0.6em;
+    }
+    #wrapper-resume article h3 {
+        font-size: 0.9em;
+        line-height: 1.84615em;
+        width: 38%;
+        float: left;
+        text-align: right;
+        padding: 0.85em 0.6em;
+    }
+
+    #wrapper-resume header h1 {
+        font-size: 2.62500em;
+        line-height: 1.14286em;
+        margin-top: 1.1429em;
+        width: 38%;
+        text-align: right;
+        line-height: 1.84615em;
+        margin-top: 0.9231em;
+        margin-bottom: 0em;
+        padding: 0.01em 0.2em 0em 0.6em;
+    }
+
+    #wrapper-resume #line {
+        background-image: url(/assets/img/resume/line.png);
+        background-repeat: repeat-y;
+    }
+
+    #wrapper-resume article section {
+        padding: 0.8em 0.4em;
+        width: 57%;
+        float: right;
+        margin-right: 3em;
+        text-shadow: 0.11em 0.15em 0.15em #fff;
+    }
+
+    #wrapper-resume article section ul li {
+        font-size: 16px;
+        line-height: 1.3;
+    }
+
+    #wrapper-resume header h2 {
+        width: 38%;
+        text-align: right;
+        padding: 0.85em 0.6em;
+    }
+}
+
+@media (min-width: 960px) {
+    #wrapper-resume {
+        width: 960px;
+    }
+}
