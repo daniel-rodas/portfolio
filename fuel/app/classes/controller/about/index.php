@@ -15,8 +15,8 @@ class Controller_About_Index extends \Controller_Base_Template
         /**
          * Home page, featured story
          */
-        $this->template->title = "About | " . $this->template->title;
-        $this->template->pageTitle = 'Web Design & New Media';
+        $this->template->title = "About " . $this->template->title;
+        $this->template->pageTitle = 'Web Design & Development';
         $this->template->content = Presenter::forge('about/page');
     }
 }
