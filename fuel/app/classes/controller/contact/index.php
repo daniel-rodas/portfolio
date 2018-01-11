@@ -64,7 +64,8 @@ class Controller_Contact_Index extends \Controller_Base_Template
                 Response::redirect('contact/index');
             }
 
-            if ( \Fuel::$env == \Fuel::PRODUCTION )
+//            if ( \Fuel::$env == \Fuel::PRODUCTION )
+            if (true)
             {
                 $contactAddresses =  '';
 
