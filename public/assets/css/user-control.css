@@ -1,9 +1,0 @@
-.user-control {
-    border: 1px solid transparent;
-    overflow: hidden;
-}
-
-.user-control:active {
-    border: 1px solid firebrick;
-    overflow: hidden;
-}
