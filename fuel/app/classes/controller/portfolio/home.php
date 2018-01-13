@@ -3,17 +3,18 @@
 class Controller_Portfolio_Home extends Controller_Portfolio_Base
 {
 
-    public function action_index()
+    public function get_list()
     {
         /**
          * Portfolio Home Page
          */
 
-        $this->template->content = View::forge('portfolio/template')
-            ->set('content',
-                Presenter::forge('portfolio/category/home')
-                    ->set('exhibitions', $this->PortfolioPackage->getExhibitions() )
-                    ->set('exhibitionFeature', $this->PortfolioPackage->exhibitionFeature() )
-                    ->set('featuredAsset', $this->PortfolioPackage->getOneRandomAsset() ) );
+        return $this->response(
+            [
+                'exhibitions' => $this->PortfolioPackage->getExhibitions(),
+                'exhibitionFeature' => $this->PortfolioPackage->exhibitionFeature(),
+                'featuredAsset' => $this->PortfolioPackage->getOneRandomAsset()
+            ]
+        );
     }
 }
