@@ -1,6 +1,6 @@
 <?php
 
-abstract class Controller_Portfolio_Base extends \Controller_Base_Template
+abstract class Controller_Portfolio_Base extends \Controller_Rest
 {
     protected $PortfolioPackage;
     protected $presenter;
