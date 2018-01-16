@@ -13,6 +13,8 @@ Autoloader::add_classes(array(
 // Register the autoloader
 Autoloader::register();
 
+require VENDORPATH . 'autoload.php';
+
 /**
  * Your environment.  Can be set to any of the following:
  *
