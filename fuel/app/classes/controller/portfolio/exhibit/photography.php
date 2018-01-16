@@ -4,20 +4,23 @@ class Controller_Portfolio_Exhibit_Photography extends Controller_Portfolio_Exhi
 {
     /**
      * @param $slug
+     * @return string
      */
-    public function action_show( $slug )
+    public function get_show( $slug )
     {
         /**
          * Portfolio Exhibit Page
          * Implements MethodTemplate Interface
          */
-        $this->asset = $this->PortfolioPackage->asset($slug);
-        $this->exhibit = $this->PortfolioPackage->exhibitByAsset($this->asset);
-        $this->LoadCommonExhibitData($this->exhibit);
-        $this->template->
-            content = Presenter::forge('portfolio/exhibit/photography')
-                ->set('featuredImage', $this->asset)
-                ->set('exhibit', $this->exhibit)
-                ->set('related', $this->relatedExhibits);
+
+        return $this->response(
+            [
+                'asset' => $this->PortfolioPackage->asset($slug),
+                'exhibition' => $this->PortfolioPackage->exhibitByAsset($this->asset),
+                'featuredImage' => $this->asset,
+                'exhibit' => $this->exhibit,
+                'related' => $this->relatedExhibits
+            ]
+        );
     }
 }

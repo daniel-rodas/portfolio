@@ -1,1 +1,0 @@
-<a href="#backToTop" style="color:#4081ad;font-size: 3em; float: right; margin-right: 1em;">&#x2191;</a>

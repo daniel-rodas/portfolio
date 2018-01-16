@@ -1,33 +1,41 @@
 <?php
 
-class Controller_Portfolio_Exhibit extends Controller_Portfolio_Base implements Method_Template
+class Controller_Portfolio_Exhibit extends Controller_Portfolio_Base
 {
     protected $asset;
     protected $exhibit;
     protected $exhibition;
     protected $relatedExhibits;
+    protected $pageSubTitle;
     /**
      * @param $slug
      */
-    public function action_show( $slug )
+    public function get_show( $slug )
     {
         /**
          * Portfolio Exhibit Page
          * Implements MethodTemplate Interface
          */
-        $this->exhibit = $this->PortfolioPackage->exhibit($slug);
-        $this->LoadCommonExhibitData($this->exhibit);
-        $this->templateExhibit($this->exhibit);
-        $this->template->content = $this->presenter->set('exhibit', $this->exhibit)->set('related', $this->relatedExhibits);
+
+        // die('You are NOW in the Controller_Portfolio_Exhibit action_show( $slug ).');
+//        $this->exhibit = $this->PortfolioPackage->exhibit($slug);
+        echo $slug;
+        $this->exhibit = $this->PortfolioPackage->exhibit('photograpy');
+
+        return $this->response(['exhibit' => $this->exhibit]);
+
+        // ERROR!
+//        $this->LoadCommonExhibitData($this->exhibit);
+//        $this->templateExhibit($this->exhibit);
+//        $this->template->content = $this->presenter->set('exhibit', $this->exhibit)->set('related', $this->relatedExhibits);
     }
 
     protected function LoadCommonExhibitData( $exhibit )
     {
-        $this->template->pageTitle = ucwords(\Inflector::friendly_title($exhibit->slug, ' ', true));
-        $this->relatedExhibits = View::forge('portfolio/category/related')
-            ->set('exhibits', $this->PortfolioPackage->getRelatedExhibits($exhibit));
+        $this->pageTitle = ucwords(\Inflector::friendly_title($exhibit->slug, ' ', true));
+        $this->relatedExhibits = $this->PortfolioPackage->getRelatedExhibits($exhibit);
         $this->exhibition = $this->exhibit->getExhibition($exhibit);
-        $this->template->pageSubTitle = $this->exhibition->name;
+        $this->pageSubTitle = $this->exhibition->name;
     }
 
     /**

@@ -19,9 +19,9 @@ class Controller_Base_Template extends \Controller_Rest
 
     }
 
-    public function action_index()
+    public function get_index()
     {
-        die('nothing.');
+        return $this->response('Not Authorized.', 401);
     }
 
     public function action_404()

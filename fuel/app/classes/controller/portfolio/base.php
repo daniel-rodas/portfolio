@@ -15,6 +15,4 @@ abstract class Controller_Portfolio_Base extends \Controller_Base_Template
         $this->pageTitle = "Web Design & New Media Portfolio";
     }
 
-
-
 }
