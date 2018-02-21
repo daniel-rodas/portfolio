@@ -17,9 +17,9 @@ class Controller_Portfolio_Exhibit extends Controller_Portfolio_Base
          * Implements MethodTemplate Interface
          */
 
-        // die('You are NOW in the Controller_Portfolio_Exhibit action_show( $slug ).');
-//        $this->exhibit = $this->PortfolioPackage->exhibit($slug);
-        echo $slug;
+        //$this->exhibit = $this->PortfolioPackage->exhibit($slug);
+
+        // TODO: Fix null results
         $this->exhibit = $this->PortfolioPackage->exhibit('photograpy');
 
         return $this->response(['exhibit' => $this->exhibit]);

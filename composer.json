@@ -17,7 +17,7 @@
         "monolog/monolog": "1.5.*",
         "phpseclib/phpseclib": "2.0.0",
         "michelf/php-markdown": "1.4.0",
-        "rodasnet/portfolio":"1.1.1"
+        "rodasnet/portfolio":"1.1.2.2"
     },
     "require-dev": {
         "fuel/docs": "1.8.*"
