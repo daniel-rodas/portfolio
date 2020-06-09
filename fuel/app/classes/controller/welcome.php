@@ -17,9 +17,9 @@
  * response body and status.
  *
  * @package  app
- * @extends  Controller
+ * @extends  Controller_Rest
  */
-class Controller_Welcome extends Controller
+class Controller_Welcome extends Controller_Rest
 {
 
 	/**
@@ -28,9 +28,11 @@ class Controller_Welcome extends Controller
 	 * @access  public
 	 * @return  Response
 	 */
-	public function action_index()
+	public function get_index()
 	{
-		return Response::forge(View::forge('welcome/index'));
+		//return Response::forge(View::forge('welcome/index'));
+
+		return "Welcome to Portfolio API v0.10.0-alpha";
 	}
 
 	/**
@@ -40,10 +42,13 @@ class Controller_Welcome extends Controller
 	 * @access  public
 	 * @return  Response
 	 */
-	public function action_hello()
+	public function get_hello($greeting)
 	{
-
-        return Response::forge(Presenter::forge('welcome/hello'));
+		try {
+			return $this->response("Welcome $greeting, to Portfolio API v0.10.0-alpha");
+		} catch (Exception $e) {
+			return $this->response("= [", 404);
+		}        
 	}
 
 	/**
@@ -52,7 +57,7 @@ class Controller_Welcome extends Controller
 	 * @access  public
 	 * @return  Response
 	 */
-	public function action_404()
+	public function get_404()
 	{
 		return Response::forge(Presenter::forge('welcome/404'), 404);
 	}
